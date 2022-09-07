@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone's Website</title>
+    <style>
+        body {
+            margin: 0;
+            /* vh 是view height 既视窗高度的意思，100就是100%占满窗口高度 */
+            height: 100vh;
+            background-color: #eee;
+        }
+
+        /* * {
+      border: 1px solid #333;
+    } */
+        .flex {
+            display: flex;
+        }
+
+        /* flex等于盒子，占满其他地方100%比例 */
+        .flex1 {
+            flex: 1;
+        }
+
+        /* 竖向 */
+        .column {
+            flex-direction: column;
+        }
+
+        /* 阴影 */
+        .yinYing {
+            box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+                rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+        }
+
+        /* 白色背景 */
+        .baiSe {
+            background-color: rgba(16, 166, 204, 0.589);
+        }
+
+        /* 上下左右外边距 */
+        .mg8 {
+            margin: 8px;
+        }
+
+        /* 右外边距 */
+        .mgr8 {
+            margin-right: 8px;
+        }
+
+        /* 上外边距 */
+        .mgt8 {
+            margin-top: 8px;
+        }
+
+        /* 四个小盒子 */
+        .shuJu {
+            height: auto;
+        }
+
+        /* 中间的大盒子 */
+        .lieBiaoXiang {
+            height: "500px auto";
+        }
+
+        /* 导航条 */
+        .daoHang {
+            padding: 10px 20px;
+            border-bottom: 1px solid rgb(214, 34, 34);
+            font-size: 14px;
+            color: rgb(14, 13, 13);
+        }
+
+        .neiRong::-webkit-scrollbar {
+            display: none;
+            /* Chrome Safari */
+        }
+    </style>
+</head>
+
+
+<body class="flex">
+    <!-- ======= 侧边栏 ======= -->
+    <div style="max-width: 500px auto; z-index: 3;padding:20px;",
+            class="ceBian flex column baiSe yinYing">
+        <div style="
+          padding: 10px;
+          align-items: center;
+          justify-content: center;
+          border-bottom: 1px solid #999;" class="flex">
+            <img alt="logo" src="img\rock1.jpg" width="50px" height="50px" />
+            <div style="margin-left: 10px">Stone</div>
+        </div>
+        <div class="flex1 column">
+            <h1 class="app-name"><a class="app-name-link" data-nosearch="" href="/" one-link-mark="yes">Stone's
+                    Website</a></h1>
+            <ul>
+                <li><a href="#/" title="Stone's Website" one-link-mark="yes">主页</a></li>
+                <li>我的项目</li>
+                <ul>
+                    <a href="#/projects/do_terminal/" title="Do Terminal" one-link-mark="yes">To do list</a>
+                    <ul>
+                        <li><a href="#/projects/do_terminal/quick_start" title="快速开始" one-link-mark="yes">快速开始</a></li>
+                        </li>
+                    </ul>
+                    </li>
+                </ul>
+                </li>
+            </ul>
+            <hr>
+            <ul>
+                <p><strong>友情链接</strong></p>
+            </ul>
+            <ul>
+                <li><a href="https://jungsonstone.github.io/testmain/" target="_blank" rel="noopener"
+                        one-link-mark="yes">Github</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 主区域 -->
+    <div class="flex flex1 column"><!-- 竖方向flex -->
+        <!-- 头部栏 -->
+        <div style="height: 100px; z-index: 2;padding:5px;text-align:center;background-color:rgba(255, 0, 0, 0.5);  width: 100%;height: 10%;" class="baiSe yinYing">
+            <!--<img src="img/blank.png" width=100% height="100" /> -->
+            <h1 >欢迎来到我的网站</h1>
+        </div>
+        <div style="height: 15px;color:rgb(0, 162, 255);">
+            <marquee direction="right">欢迎访问Stone网站！</marquee>
+        </div>
+        <!-- 内容区 -->
+        <div class="flex flex1 neiRong" style="overflow: auto">
+            <!-- 左区3/4 -->
+            <div style="flex: 6" class="flex column mg8"style="padding:20px;">
+                <!-- 数据区 横向-->
+                <div class="flex">
+                    <!-- 四个小块显示重点数据 -->
+                    <div class="shuJu baiSe yinYing flex1 mgr8"style="padding:10px;text-align:center;">
+                        <h2>首  页</h2>
+                    </div>
+                    <div class="shuJu baiSe yinYing flex1 mgr8"style="padding:10px;text-align:center;">
+                        <h2>首页</h2>
+                    </div>
+                    <div class="shuJu baiSe yinYing flex1 mgr8"style="padding:10px;text-align:center;">
+                        <h2>首页</h2>
+                    </div>
+                    <div class="shuJu baiSe yinYing flex1 mgr8"style="padding:10px;text-align:center;">
+                        <h2>首页</h2>
+                    </div>
+                    <div class="shuJu baiSe yinYing flex1 mgr8"style="padding:10px;text-align:center;">
+                        <h2>首页</h2>
+                    </div>
+                    <div class="shuJu baiSe yinYing flex1"style="padding:10px;text-align:center;">
+                        <h2>首页</h2>
+                    </div>
+                </div>
+                <!-- 列表区，竖向列表数据可以无限增加 -->
+                <div class="flex1 column">
+                    <!-- 列表项 -->
+                    <div class="lieBiaoXiang mgt8 baiSe yinYing" style="padding:30px;">
+                    <article class="markdown-section" id="main">
+                        <h1><a href="index.html" data-id="欢迎来到我的网站"
+                            class="anchor" one-link-mark="yes"><span>欢迎来到我的网站!</span></a></h1>
+                        <h2 class="name">Welcome to <span>Mamba</span></h2>
+                            <p class="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                            <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>
+                            
+                            <hr>
+                        <p>你好, 我是 <strong>Stone</strong>.</p>
+                        <blockquote>
+                          <p id="motd">争名夺利几时休，早起迟眠不自由。<br>
+                            骑着驴骡思骏马，官居宰相望王侯。<br>
+                            只愁衣食耽劳碌，何怕阎君就取勾？<br>
+                            继子荫孙图富贵，更无一个肯回头。<em> --《西游记》</em></p>
+                        </blockquote>
+                        <p>明朝文人吴承恩一生仕途艰辛，晚年辞官归隐闭门著述。他在《西游记》第一回中题诗描述书中南瞻部洲人们的生活状态，一如现实中我们的芸芸众生之相。
+                          诗中说，人人都在争名夺利，什么时候能够停止呢？追逐名利的人每日起早贪黑，没有一点自由。骑着驴子又想要骏马，官居宰相又想称王封侯。
+                          整天为吃饭穿衣而劳碌奔波，从不惧怕阎王爷会随时来取魂勾命。又想着挣下家业传给子孙，从来没有一个明白人能够回头。诗中表达了作者对不顾及自身安危的追名逐利之人的无奈，
+                          告诫人们要知足常乐，急功近利总会使我们远离生命的意义。飞蛾扑火，我们可以称赞它们向往光明的那种勇敢精神，也可以说那是一种自食其果的愚蠢。
+                          恋爱中的痴男怨女，明明知道彼此之间没有结果，一方仍然心情纠结穷追不舍，最后丢掉了曾经的美好，以不欢而散而终结。世间没有绝对的圆满，合乎时宜的东西就是一种美好<br>
+                        </p>
+                        <p>
+                          人海茫茫，众生芸芸，人的一生该如何度过？笔者认为，假若你是上层阶级富家子弟，需秉持“穷则独善其身，达则兼济天下”的传统信念，为国家发展献策出力，为社会民生造福；
+                          如你是中产阶层，可以尽全力去实现自己的人生理想抱负，抚育后世成长为国之栋梁之才；假若你是平民百姓，应当奋发进取，力争超越家族长辈，超越自己，为追求美好的生活而努力拼搏至生命的最后一息……
+                          如果你是这个社会的特殊群体，倍受人们怜惜，需要你去坚强自己，在生活自理的同时，应为这美好的社稷发出自己的一丝丝亮光，用坚韧和毅力去感染身边人群，去实现人生的价值。
+                        </p>
+                      </article>
+                    </div>
+                    <div class="flex1 column mgt8 baiSe yinYing" style="padding:20px;">
+                        <h3 id="关注我-"><a href="" data-id="关注我-" class="anchor" one-link-mark="yes"><span>关注我 :)</span></a>
+                        </h3>
+                        <ul>
+                            <li><strong>Github</strong>: <a href="https://github.com/JungsonStone" target="_blank" rel="noopener"
+                                one-link-mark="yes">JungsonStone</a></li>
+                          </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 右区1/4 column 竖向 -->
+            <div style="flex:1" class="youQu flex column mgr8 mgt8">
+                <!-- 提示区 -->
+                <div style="padding:20px;text-align:left;flex:100%;" class="baiSe yinYing;">
+                <p>  人海茫茫，众生芸芸，人的一生该如何度过？笔者认为，假若你是上层阶级富家子弟，需秉持“穷则独善其身，达则兼济天下”的传统信念，为国家发展献策出力，为社会民生造福；
+                    如你是中产阶层，可以尽全力去实现自己的人生理想抱负，抚育后世成长为国之栋梁之才；假若你是平民百姓，应当奋发进取，力争超越家族长辈，超越自己，为追求美好的生活而努力拼搏至生命的最后一息……
+                    如果你是这个社会的特殊群体，倍受人们怜惜，需要你去坚强自己，在生活自理的同时，应为这美好的社稷发出自己的一丝丝亮光，用坚韧和毅力去感染身边人群，去实现人生的价值。</p>
+                </div>
+                <!-- 消息区 -->
+                <div style="padding:20px;text-align:left;flex:50%;" class="mgt8 baiSe yinYing;">
+                <p> 人海茫茫，众生芸芸，人的一生该如何度过？笔者认为，假若你是上层阶级富家子弟，需秉持“穷则独善其身，达则兼济天下”的传统信念，为国家发展献策出力，
+                    人海茫茫，众生芸芸，人的一生该如何度过？笔者认为，假若你是上层阶级富家子弟，需秉持“穷为社会民生造福； </p>
+                </div>
+            </div>
+        </div>
+    <div class="flex flex column" style="background-color:rgb(171, 234, 253);
+                text-align: center;">
+    <span>Copyright (c) Stone 2022</span>
+    </div>
+</div>
+
+</body>
+
+</html>
